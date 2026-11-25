@@ -16,11 +16,11 @@ NRPC_LIB = ../new_rpc/new_rpc.a
 
 NIO_LIB = ../nio_lib/nio_lib.a
 
-OBJS = rexec.o driver.o file_xfr.o playfile.o playlib.o 
+OBJS = rexec.o driver.o file_xfr.o playfile.o 
 
 TXT_OBJS = txtloop.o txtmain.o txtrpc.o txtterm.o
 
-SDL_OBJS = loop.o main.o nio_sdl.o sdl_font.o sdl_screen.o sdl_text.o sdl_mouse.o sdl_keyb.o rpc.o term.o SDL_prim.o
+SDL_OBJS = loop.o main.o nio_sdl.o sdl_font.o sdl_screen.o sdl_text.o sdl_mouse.o sdl_keyb.o rpc.o term.o
 
 all:		$(BIN)
 
@@ -28,7 +28,7 @@ nlogin-txt:		$(OBJS) $(TXT_OBJS)
 		$(CC) -o $@ $(TXT_OBJS) $(OBJS) $(NRPC_LIB) $(NIO_LIB) $(LIBS)
 
 nlogin:		$(OBJS) loop.c main.c nio_sdl.c nio_sdl.h
-		$(CC) $(SDL_CFLAGS) -c loop.c main.c nio_sdl.c sdl_font.c sdl_screen.c sdl_text.c sdl_mouse.c sdl_keyb.c rpc.c term.c SDL_prim.c
+		$(CC) $(SDL_CFLAGS) -c loop.c main.c nio_sdl.c sdl_font.c sdl_screen.c sdl_text.c sdl_mouse.c sdl_keyb.c rpc.c term.c
 		$(CC) -o $@ $(SDL_OBJS) $(OBJS) $(NRPC_LIB) $(NIO_LIB) $(SDL_LIBS)
 
 exectest:	$(OBJS) exectest.o
