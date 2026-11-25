@@ -27,6 +27,8 @@ Mixed. Many files use Chris's GPL or LGPL headers. `inf/COPYING` and a
 COPYING under `old/nio.old` are the standard GNU GPL text. Some older
 files have no license paragraph.
 
+The GNU GPL 2 (or later) text is in LICENSE. Most headed sources use those terms; a few files have different or no terms, as noted in their headers.
+
 ## Third-party files removed
 
 The same third-party set found in the NIO/d0 trees, in their older
