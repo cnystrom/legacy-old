@@ -1,0 +1,6 @@
+#!/bin/sh
+
+VERSION=0.02
+BUILD=012
+DATE=031705
+

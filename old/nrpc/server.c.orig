@@ -1,0 +1,37 @@
+/*
+ * server.c
+ */
+
+#include "example.h"
+
+#define STR_LEN		(128)
+
+int
+main(void)
+{
+  char hostname[HOSTNAME_LEN];
+  char welcome[STR_LEN];
+
+  gethostname(hostname, HOSTNAME_LEN);
+
+  snprintf(welcome, STR_LEN, "NRPC Test Server 0.1 (%s)", hostname);
+
+  nrpc_init_server();
+  nrpc_welcome(welcome);
+
+  test_send_int(INT_MAX);
+  test_send_int(INT_MIN);
+  test_send_double(PI);
+  test_send_double(DBL_MAX);
+  test_send_double(DBL_MIN);
+  test_send_string("This test is a very long string!");
+  test_combo(3, PI, "The double is: ");
+//  nrpc_reverse();
+//  echo_data();
+
+  nrpc_exit();
+  nrpc_close();
+
+  exit(0);
+}
+

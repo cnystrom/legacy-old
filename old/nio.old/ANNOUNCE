@@ -1,0 +1,72 @@
+
+Application
+===========
+
+nio-0.0.1 (alpha)
+
+Description
+===========
+
+NIO stands for New IO.
+
+NIO is a new remote display system and also a new internet service.
+
+It consist of a library that can be linked to your programs, a server
+(nserver), a client (nlogin), and some example programs.
+
+Basically it is a set of RPC calls to manage a SDL client remotely. It can
+be thought of as a poor man's X-Windows, although it is not a desktop
+system.
+
+The advantages of nio are:
+
+  - it is internaly simple (so the API can easily be expanded)
+
+  - it is very easy to program for, since the programming model does not
+    use events or an object orientation (see example programs).
+
+General Information
+===================
+
+Features:
+
+  - Supports usual graphics primitives
+  - Has basic terminal support
+  - Supports mouse
+  - Supports displaying images
+  - Supports playing simple tunes and music files
+
+Enhancements and Fixes
+======================
+
+None. This is the initial release.
+
+Future Plans
+============
+
+Support for GL
+
+Warnings
+========
+
+This is alpha level software that is sure to have bugs.
+Having said that it does seem to work pretty well for me.
+
+There are known securiy holes, such as using exec() which transmits login
+and password information across the net in the clear (is there an
+secure exec() somewhere?).
+
+This alpha release is more of a concept demonstration than a finished
+product.
+
+Supported Platforms
+===================
+
+Solaris, Linux, MS Windows
+
+Download
+========
+
+http://www.newio.org/download
+
+

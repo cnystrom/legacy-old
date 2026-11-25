@@ -1,0 +1,17 @@
+#
+# Makefile for nio_lib.o
+#
+
+CC =  gcc
+
+CFLAGS = -I../new_rpc -O -Wall -g -DDEBUG -DUNIX
+
+OBJS = nio_lib.o
+
+all:		$(OBJS)
+
+install:
+
+clean:
+		rm -f *.o core
+

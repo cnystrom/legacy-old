@@ -1,0 +1,27 @@
+
+CC=gcc
+
+RPCINCLUDEPATH=C:\ONCRPC
+RPCLIBPATH=$(RPCINCLUDEPATH)\bin
+
+# Parameters given to the compiler
+CFLAGS=-DWIN32
+
+OBJS=main.o \
+     rpc.o \
+     rexec.o \
+     nio_lib.o
+
+LIBS = -loncrpc -lwsock32
+
+all: nlogin.exe
+
+nlogin.exe: $(OBJS)
+	$(CC) -o nlogin.exe $(OBJS) -L$(RPCLIBPATH) $(LIBS) 
+
+clean:
+	del *.o *.exe *.dll
+
+.c.o:
+	$(CC) -I$(RPCINCLUDEPATH) -c $(CFLAGS) $*.c
+

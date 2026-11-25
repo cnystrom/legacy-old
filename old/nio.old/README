@@ -1,0 +1,16 @@
+
+
+cleanup.sh - cleanup all directories
+
+compile.sh - compile all directories (Run this to build programs)
+
+examples   - example NIO programs
+
+Makefile   - Makefile for nio_lib
+
+nlogin     - nio client nlogin source code directory
+
+README     - This readme file
+
+TODO       - nio todo list
+

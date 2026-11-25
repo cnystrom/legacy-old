@@ -1,0 +1,26 @@
+
+./compile.sh
+
+./install.sh
+
+--
+
+You need to open up the rexec service for this alpha release. On RedHat
+you do this by setting the disable parameter to no in the /etc/xinetd.d/rexeci
+file and rebooting.
+
+There is a little rexec test program that you can use to make sure that this
+is working.
+
+Note: this is a big security hole. So close it back up when done testing.
+
+--
+
+Note: On Solaris in /usr/dt/config/Xservers I had to disable dual head and
+ enable 24 bit framebuffer like this:
+
+:0 Local local_uid@console root /usr/openwin/bin/Xsun :0 -nobanner -dev
+ /dev/fb0 defdepth 24
+
+I believe this is an SDL issue and not an issue specifically with my code.
+

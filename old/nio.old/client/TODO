@@ -1,0 +1,34 @@
+
+               NIO Client (nlogin - the application browser)
+               ---------------------------------------------
+
+Bugs:
+----
+fonts not working right for example apps yet
+images and sounds need allocation like fonts (not from files)
+add more parameters and capabilities
+get rid of all strcpy (need to use strn versions)
+
+
+Feature Requests:
+----------------
+
+Allow user to resize
+- SDL_RESIZABLE as flag to SDL_SetVideoMode
+- SDL_ResizeEvent
+Print at in nio_term
+Change size in nio term
+Change home location in nio term
+
+Add subdir support for file xfer
+Do not xfer files if they already exist
+Command to clear file cache (and/or return same file number)
+
+Add draw_circle
+Add draw_triangle
+Add draw_polygon (?)
+
+Secure version of rexec?
+
+Make versions for other OS (Windows, MacOS X, etc)
+

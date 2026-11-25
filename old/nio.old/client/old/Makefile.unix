@@ -1,0 +1,22 @@
+#
+#
+#
+
+CC =  gcc
+
+BIN = nlogin
+
+LIB = -lsocket -lnsl -lm
+
+CFLAGS = -I.. -I/opt/sfw/include -I/usr/local/include -L/opt/sfw/lib -L/usr/local/lib -O -Wall -g -DDEBUG -DUNIX
+
+OBJS = main.o rpc.o nio_lib.o rexec.o
+
+all: $(BIN)
+
+nlogin:		$(OBJS)
+		$(CC) -o $@ $(OBJS) $(LIB)
+
+clean:
+		rm -f *.o $(BIN) core
+
