@@ -16,6 +16,10 @@ From Chris Nystrom's personal source archive (the hallie tree), posted
 publicly at his request. Years in headers vary; much of the NIO-related
 material is 2002–2005.
 
+## Pages
+
+Chris's old programs page is at https://nystrom.family/chris/old/programs.html.
+
 ## License
 
 Mixed. Many files use Chris's GPL or LGPL headers. `inf/COPYING` and a
